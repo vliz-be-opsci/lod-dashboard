@@ -1,0 +1,37 @@
+{
+    "uri": "https://marineregions.org/feed.ttl",
+    "type": "LDES",
+    "datetime_completed": "2024-10-04T14:22:10.123456Z",
+    "test_suite": [
+        {
+            "name" : "alt_profile_check",
+            "result": "fail",
+            "message": "404 Client Error: Not Found for url: https://marineregions.org/alt-profile"
+        },
+        {
+            "name" : "check_available_mime_types",
+            "result": "fail",
+            "message": "No alt-profile found"
+        },
+        {
+            "name" : "check_ldes_single_page_check",
+            "result": "pass",
+            "message": "200 message on https://marineregions.org/feed.ttl with response mime type text/turtle"
+        },
+        {
+            "name" : "check_ttl_syntax",
+            "result": "pass",
+            "message": "Turtle syntax is valid"
+        },
+        {
+            "name" : "check_ldes_version",
+            "result": "pass",
+            "message": "LDES version 1.0 detected"
+        },
+        {
+            "name" : "check_shacl_validation",
+            "result": "pass",
+            "message": "Resource is valid against LDES 1.0 SHACL shapes"
+        }
+    ]
+}

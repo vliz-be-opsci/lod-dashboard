@@ -1,0 +1,51 @@
+Config {
+  INGEST_MODE: 'MATERIALIZE',
+  REPLACE_VERSIONS: true,
+  PERSIST_STATE: false,
+  LDES_ENDPOINT_VIEW: 'https://marine-term-translations.github.io/P02-NL/LDES/feed',
+  LDES_POLLING_INTERVAL: 60000,
+  LDES_REQUESTS_PER_MINUTE: 60,
+  LDES_INFO_REQUEST_TIMEOUT: 60000,
+  SPARQL_BATCH_SIZE: 150,
+  SPARQL_AUTH_USER: undefined,
+  SPARQL_AUTH_PASSWORD: undefined,
+  BLANK_NODE_NAMESPACE: 'http://mu.semte.ch/blank#',
+  RUN_ONCE: false,
+  MU_APPLICATION_GRAPH: 'http://datasets.vocabsearch.local/3cb4bf06-99fe-11f0-8b74-ce8c57b42f6b',
+  MU_SPARQL_ENDPOINT: 'http://database:8890/sparql',
+  DEBUG_AUTH_HEADERS: false,
+  LDES_VERSION_OF_PATH: undefined,
+  LDES_TIMESTAMP_PATH: undefined
+}
+Starting server on 0.0.0.0:80 in production mode
+2025-09-25T10:56:09.565Z {ldes-consumer-service} [main] info: Starting stream...
+2025-09-25T10:56:09.579Z {ldes-consumer-service} [main] info: Waiting for LDES info...
+2025-09-25T10:56:09.596Z {ldes-consumer-service} [throttled-fetch] debug: Sending request to marine-term-translations.github.io immediately: https://marine-term-translations.github.io/P02-NL/LDES/feed
+2025-09-25T10:57:09.582Z {ldes-consumer-service} [main] error: Processing stream failed
+2025-09-25T10:57:09.582Z {ldes-consumer-service} [main] error: Didn't receive LDES feed info in 60000ms. We will stop waiting.
+2025-09-25T10:57:09.583Z {ldes-client} [ExitHandler] debug: [handleExit] Exiting on 'unhandledRejection' event with code '99'.
+2025-09-25T10:57:09.583Z {ldes-client} [ExitHandler] error: [handleExit] Uncaught Exception: Error - RDF parsing failed: none of the configured parsers were able to handle the media type application/octet-stream for https://marine-term-translations.github.io/P02-NL/LDES/feed
+    Error messages of failing actors:
+        Unrecognized media type: application/octet-stream
+        Unrecognized media type: application/octet-stream
+        Unrecognized media type: application/octet-stream
+        Unrecognized media type: application/octet-stream
+        Unrecognized media type: application/octet-stream
+        Unrecognized media type: application/octet-stream
+2025-09-25T10:57:09.584Z {ldes-client} [ExitHandler] debug: Error: RDF parsing failed: none of the configured parsers were able to handle the media type application/octet-stream for https://marine-term-translations.github.io/P02-NL/LDES/feed
+    Error messages of failing actors:
+        Unrecognized media type: application/octet-stream
+        Unrecognized media type: application/octet-stream
+        Unrecognized media type: application/octet-stream
+        Unrecognized media type: application/octet-stream
+        Unrecognized media type: application/octet-stream
+        Unrecognized media type: application/octet-stream
+    at TestResultFailed.getOrThrow (/usr/src/dist/node_modules/@comunica/core/lib/TestResult.js:149:15)
+    at MediatorRace.mediate (/usr/src/dist/node_modules/@comunica/core/lib/Mediator.js:93:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ActorDereferenceRdfParse.run (/usr/src/dist/node_modules/@comunica/bus-dereference/lib/ActorDereferenceParse.js:65:27)
+    at async TestResultPassed.mapAsync (/usr/src/dist/node_modules/@comunica/core/lib/TestResult.js:112:37)
+    at async MediatorRace.mediate (/usr/src/dist/node_modules/@comunica/core/lib/Mediator.js:92:26)
+    at async statelessPageFetch (file:///usr/src/dist/node_modules/ldes-client/dist/lib/fetcher/pageFetcher.js:17:18)
+    at async Client.init (file:///usr/src/dist/node_modules/ldes-client/dist/lib/client.js:167:22)
+    at async Object.start (file:///usr/src/dist/node_modules/ldes-client/dist/lib/client.js:313:17)
