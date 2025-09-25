@@ -1,0 +1,140 @@
+Config {
+  INGEST_MODE: 'MATERIALIZE',
+  REPLACE_VERSIONS: true,
+  PERSIST_STATE: false,
+  LDES_ENDPOINT_VIEW: 'https://marine-term-translations.github.io/P02-NL/LDES/latest.ttl',
+  LDES_POLLING_INTERVAL: 60000,
+  LDES_REQUESTS_PER_MINUTE: 60,
+  LDES_INFO_REQUEST_TIMEOUT: 60000,
+  SPARQL_BATCH_SIZE: 150,
+  SPARQL_AUTH_USER: undefined,
+  SPARQL_AUTH_PASSWORD: undefined,
+  BLANK_NODE_NAMESPACE: 'http://mu.semte.ch/blank#',
+  RUN_ONCE: false,
+  MU_APPLICATION_GRAPH: 'http://datasets.vocabsearch.local/dcf8c904-99fd-11f0-9b9a-ce8c57b42f6b',
+  MU_SPARQL_ENDPOINT: 'http://database:8890/sparql',
+  DEBUG_AUTH_HEADERS: false,
+  LDES_VERSION_OF_PATH: undefined,
+  LDES_TIMESTAMP_PATH: undefined
+}
+Starting server on 0.0.0.0:80 in production mode
+2025-09-25T10:53:30.170Z {ldes-consumer-service} [main] info: Starting stream...
+2025-09-25T10:53:30.186Z {ldes-consumer-service} [main] info: Waiting for LDES info...
+2025-09-25T10:53:30.202Z {ldes-consumer-service} [throttled-fetch] debug: Sending request to marine-term-translations.github.io immediately: https://marine-term-translations.github.io/P02-NL/LDES/latest.ttl
+2025-09-25T10:53:30.414Z {ldes-client} [getShape] debug: Found 1 shapes, 1 timestampPaths, 1 versionOfPaths
+2025-09-25T10:53:30.416Z {ldes-client} [Manager] debug: new member extractor for https://marine-term-translations.github.io/P02-NL/LDES/feed:
+2025-09-25T10:53:30.417Z {ldes-client} [Manager] debug: {"extractor":"CBDShapeExtractor","shape":{"termType":"BlankNode","value":"df_0_2"},"timestampPath":{"termType":"NamedNode","value":"http://purl.org/dc/terms/modified"},"isVersionOfPath":{"termType":"NamedNode","value":"http://purl.org/dc/terms/isVersionOf"}}
+2025-09-25T10:53:30.417Z {ldes-client} [Client] debug: timestampPath: true
+2025-09-25T10:53:30.418Z {ldes-client} [Client] debug: Found 1 views, choosing https://marine-term-translations.github.io/P02-NL/LDES/latest.ttl
+2025-09-25T10:53:30.418Z {ldes-client} [OrderedStrategy] debug: [start] Starting at https://marine-term-translations.github.io/P02-NL/LDES/latest.ttl
+2025-09-25T10:53:30.419Z {ldes-consumer-service} [main] info: Received LDES info: {"versionOfPath":{"termType":"NamedNode","value":"http://purl.org/dc/terms/isVersionOf"},"timestampPath":{"termType":"NamedNode","value":"http://purl.org/dc/terms/modified"}}
+2025-09-25T10:53:30.421Z {ldes-client} [OrderedStrategy] debug: [modulator - ready] Ready to fetch page: https://marine-term-translations.github.io/P02-NL/LDES/latest.ttl
+2025-09-25T10:53:30.454Z {ldes-client} [OrderedStrategy] debug: [fetchNotifier - scheduleFetch] Scheduling fetch for mutable page: https://marine-term-translations.github.io/P02-NL/LDES/latest.ttl
+2025-09-25T10:53:30.454Z {ldes-client} [Fetcher] debug: [fetch] Cache for https://marine-term-translations.github.io/P02-NL/LDES/latest.ttl {"maxAge":600}
+2025-09-25T10:53:30.467Z {ldes-client} [Fetcher] debug: [fetch] Got data https://marine-term-translations.github.io/P02-NL/LDES/latest.ttl (477 quads)
+2025-09-25T10:53:30.468Z {ldes-client} [EmptyCondition] verbose: [matchRelation] Returning true
+2025-09-25T10:53:30.469Z {ldes-client} [extractRelations] debug: allowed ["https://marine-term-translations.github.io/P02-NL/LDES/1758626810.ttl"]
+2025-09-25T10:53:30.469Z {ldes-client} [OrderedStrategy] debug: [fetchNotifier - relationFound] Relation found https://marine-term-translations.github.io/P02-NL/LDES/1758626810.ttl
+2025-09-25T10:53:30.470Z {ldes-client} [OrderedStrategy] debug: [modulator - ready] Ready to fetch page: https://marine-term-translations.github.io/P02-NL/LDES/1758626810.ttl
+2025-09-25T10:53:30.470Z {ldes-client} [OrderedStrategy] debug: [fetchNotifier - pageFetched] Page fetched https://marine-term-translations.github.io/P02-NL/LDES/latest.ttl
+2025-09-25T10:53:30.470Z {ldes-client} [Manager] debug: Extracting 20 members for https://marine-term-translations.github.io/P02-NL/LDES/latest.ttl
+2025-09-25T10:53:30.477Z {ldes-client} [Manager] debug: All members extracted for https://marine-term-translations.github.io/P02-NL/LDES/latest.ttl
+2025-09-25T10:53:30.477Z {ldes-client} [OrderedStrategy] debug: [memberNotifier - done] Member extraction done for https://marine-term-translations.github.io/P02-NL/LDES/latest.ttl
+2025-09-25T10:53:31.423Z {ldes-consumer-service} [throttled-fetch] debug: Sending request to marine-term-translations.github.io after waiting 944ms: https://marine-term-translations.github.io/P02-NL/LDES/1758626810.ttl
+2025-09-25T10:53:31.547Z {ldes-client} [OrderedStrategy] debug: [fetchNotifier - scheduleFetch] Scheduling fetch for mutable page: https://marine-term-translations.github.io/P02-NL/LDES/1758626810.ttl
+2025-09-25T10:53:31.547Z {ldes-client} [Fetcher] debug: [fetch] Cache for https://marine-term-translations.github.io/P02-NL/LDES/1758626810.ttl {"maxAge":600}
+2025-09-25T10:53:31.556Z {ldes-client} [Fetcher] debug: [fetch] Got data https://marine-term-translations.github.io/P02-NL/LDES/1758626810.ttl (472 quads)
+2025-09-25T10:53:31.556Z {ldes-client} [extractRelations] debug: allowed []
+2025-09-25T10:53:31.556Z {ldes-client} [OrderedStrategy] debug: [fetchNotifier - pageFetched] Page fetched https://marine-term-translations.github.io/P02-NL/LDES/1758626810.ttl
+2025-09-25T10:53:31.556Z {ldes-client} [Manager] debug: Extracting 20 members for https://marine-term-translations.github.io/P02-NL/LDES/1758626810.ttl
+2025-09-25T10:53:31.559Z {ldes-client} [Manager] debug: All members extracted for https://marine-term-translations.github.io/P02-NL/LDES/1758626810.ttl
+2025-09-25T10:53:31.559Z {ldes-client} [OrderedStrategy] debug: [memberNotifier - done] Member extraction done for https://marine-term-translations.github.io/P02-NL/LDES/1758626810.ttl
+2025-09-25T10:53:31.559Z {ldes-client} [OrderedStrategy] debug: [checkEnd] No more launched relations
+2025-09-25T10:53:31.568Z {ldes-client} [OrderedStrategy] debug: [checkEnd] Polling is enabled, setting timeout of 60000 ms to poll
+Checking retry allowed for error: Error: HTTP Error Response: 500 Internal Server Error and attempt: 0
+Retry allowed? false
+Failed Query:
+                  INSERT DATA {
+    GRAPH <http://datasets.vocabsearch.local/dcf8c904-99fd-11f0-9b9a-ce8c57b42f6b> {
+        """http://vocab.nerc.ac.uk/collection/P02/FVLT"""^^<http://www.w3.org/2001/XMLSchema#string> <http://www.w3.org/2004/02/skos/core#altLabel> """to be filled in"""@nl.
+        """http://vocab.nerc.ac.uk/collection/P02/FVLT"""^^<http://www.w3.org/2001/XMLSchema#string> <http://www.w3.org/2004/02/skos/core#definition> """to be filled in"""@nl.
+        """http://vocab.nerc.ac.uk/collection/P02/FVLT"""^^<http://www.w3.org/2001/XMLSchema#string> <http://www.w3.org/2004/02/skos/core#prefLabel> """to be filled in"""@nl.
+        """http://vocab.nerc.ac.uk/collection/P02/FVLT"""^^<http://www.w3.org/2001/XMLSchema#string> <http://purl.org/dc/terms/modified> """2025-09-25T10:50:56Z"""^^<http://www.w3.org/2001/XMLSchema#dateTime>.
+        """http://vocab.nerc.ac.uk/collection/P02/FVLT"""^^<http://www.w3.org/2001/XMLSchema#string> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept>.
+    }
+}
+2025-09-25T10:53:39.109Z {ldes-consumer-service} [member-processor] error: HTTP Error Response: 500 Internal Server Error
+2025-09-25T10:53:39.110Z {ldes-client} [Client] info: Stream canceled
+2025-09-25T10:53:39.110Z {ldes-client} [Manager] debug: Closing stream
+2025-09-25T10:53:39.115Z {ldes-consumer-service} [main] error: Processing stream failed
+2025-09-25T10:53:39.109Z {ldes-consumer-service} [main] error: HTTP Error Response: 500 Internal Server Error
+Config {
+  INGEST_MODE: 'MATERIALIZE',
+  REPLACE_VERSIONS: true,
+  PERSIST_STATE: false,
+  LDES_ENDPOINT_VIEW: 'https://marine-term-translations.github.io/P02-NL/LDES/latest.ttl',
+  LDES_POLLING_INTERVAL: 60000,
+  LDES_REQUESTS_PER_MINUTE: 60,
+  LDES_INFO_REQUEST_TIMEOUT: 60000,
+  SPARQL_BATCH_SIZE: 150,
+  SPARQL_AUTH_USER: undefined,
+  SPARQL_AUTH_PASSWORD: undefined,
+  BLANK_NODE_NAMESPACE: 'http://mu.semte.ch/blank#',
+  RUN_ONCE: false,
+  MU_APPLICATION_GRAPH: 'http://datasets.vocabsearch.local/dcf8c904-99fd-11f0-9b9a-ce8c57b42f6b',
+  MU_SPARQL_ENDPOINT: 'http://database:8890/sparql',
+  DEBUG_AUTH_HEADERS: false,
+  LDES_VERSION_OF_PATH: undefined,
+  LDES_TIMESTAMP_PATH: undefined
+}
+Starting server on 0.0.0.0:80 in production mode
+2025-09-25T10:53:42.374Z {ldes-consumer-service} [main] info: Starting stream...
+2025-09-25T10:53:42.393Z {ldes-consumer-service} [main] info: Waiting for LDES info...
+2025-09-25T10:53:42.410Z {ldes-consumer-service} [throttled-fetch] debug: Sending request to marine-term-translations.github.io immediately: https://marine-term-translations.github.io/P02-NL/LDES/latest.ttl
+2025-09-25T10:53:42.511Z {ldes-client} [getShape] debug: Found 1 shapes, 1 timestampPaths, 1 versionOfPaths
+2025-09-25T10:53:42.514Z {ldes-client} [Manager] debug: new member extractor for https://marine-term-translations.github.io/P02-NL/LDES/feed:
+2025-09-25T10:53:42.515Z {ldes-client} [Manager] debug: {"extractor":"CBDShapeExtractor","shape":{"termType":"BlankNode","value":"df_0_2"},"timestampPath":{"termType":"NamedNode","value":"http://purl.org/dc/terms/modified"},"isVersionOfPath":{"termType":"NamedNode","value":"http://purl.org/dc/terms/isVersionOf"}}
+2025-09-25T10:53:42.515Z {ldes-client} [Client] debug: timestampPath: true
+2025-09-25T10:53:42.516Z {ldes-client} [Client] debug: Found 1 views, choosing https://marine-term-translations.github.io/P02-NL/LDES/latest.ttl
+2025-09-25T10:53:42.517Z {ldes-client} [OrderedStrategy] debug: [start] Starting at https://marine-term-translations.github.io/P02-NL/LDES/latest.ttl
+2025-09-25T10:53:42.517Z {ldes-consumer-service} [main] info: Received LDES info: {"versionOfPath":{"termType":"NamedNode","value":"http://purl.org/dc/terms/isVersionOf"},"timestampPath":{"termType":"NamedNode","value":"http://purl.org/dc/terms/modified"}}
+2025-09-25T10:53:42.519Z {ldes-client} [OrderedStrategy] debug: [modulator - ready] Ready to fetch page: https://marine-term-translations.github.io/P02-NL/LDES/latest.ttl
+2025-09-25T10:53:42.553Z {ldes-client} [OrderedStrategy] debug: [fetchNotifier - scheduleFetch] Scheduling fetch for mutable page: https://marine-term-translations.github.io/P02-NL/LDES/latest.ttl
+2025-09-25T10:53:42.553Z {ldes-client} [Fetcher] debug: [fetch] Cache for https://marine-term-translations.github.io/P02-NL/LDES/latest.ttl {"maxAge":600}
+2025-09-25T10:53:42.567Z {ldes-client} [Fetcher] debug: [fetch] Got data https://marine-term-translations.github.io/P02-NL/LDES/latest.ttl (477 quads)
+2025-09-25T10:53:42.569Z {ldes-client} [EmptyCondition] verbose: [matchRelation] Returning true
+2025-09-25T10:53:42.569Z {ldes-client} [extractRelations] debug: allowed ["https://marine-term-translations.github.io/P02-NL/LDES/1758626810.ttl"]
+2025-09-25T10:53:42.570Z {ldes-client} [OrderedStrategy] debug: [fetchNotifier - relationFound] Relation found https://marine-term-translations.github.io/P02-NL/LDES/1758626810.ttl
+2025-09-25T10:53:42.570Z {ldes-client} [OrderedStrategy] debug: [modulator - ready] Ready to fetch page: https://marine-term-translations.github.io/P02-NL/LDES/1758626810.ttl
+2025-09-25T10:53:42.571Z {ldes-client} [OrderedStrategy] debug: [fetchNotifier - pageFetched] Page fetched https://marine-term-translations.github.io/P02-NL/LDES/latest.ttl
+2025-09-25T10:53:42.571Z {ldes-client} [Manager] debug: Extracting 20 members for https://marine-term-translations.github.io/P02-NL/LDES/latest.ttl
+2025-09-25T10:53:42.578Z {ldes-client} [Manager] debug: All members extracted for https://marine-term-translations.github.io/P02-NL/LDES/latest.ttl
+2025-09-25T10:53:42.579Z {ldes-client} [OrderedStrategy] debug: [memberNotifier - done] Member extraction done for https://marine-term-translations.github.io/P02-NL/LDES/latest.ttl
+2025-09-25T10:53:43.521Z {ldes-consumer-service} [throttled-fetch] debug: Sending request to marine-term-translations.github.io after waiting 941ms: https://marine-term-translations.github.io/P02-NL/LDES/1758626810.ttl
+2025-09-25T10:53:43.534Z {ldes-client} [OrderedStrategy] debug: [fetchNotifier - scheduleFetch] Scheduling fetch for mutable page: https://marine-term-translations.github.io/P02-NL/LDES/1758626810.ttl
+2025-09-25T10:53:43.534Z {ldes-client} [Fetcher] debug: [fetch] Cache for https://marine-term-translations.github.io/P02-NL/LDES/1758626810.ttl {"maxAge":600}
+2025-09-25T10:53:43.543Z {ldes-client} [Fetcher] debug: [fetch] Got data https://marine-term-translations.github.io/P02-NL/LDES/1758626810.ttl (472 quads)
+2025-09-25T10:53:43.544Z {ldes-client} [extractRelations] debug: allowed []
+2025-09-25T10:53:43.544Z {ldes-client} [OrderedStrategy] debug: [fetchNotifier - pageFetched] Page fetched https://marine-term-translations.github.io/P02-NL/LDES/1758626810.ttl
+2025-09-25T10:53:43.544Z {ldes-client} [Manager] debug: Extracting 20 members for https://marine-term-translations.github.io/P02-NL/LDES/1758626810.ttl
+2025-09-25T10:53:43.547Z {ldes-client} [Manager] debug: All members extracted for https://marine-term-translations.github.io/P02-NL/LDES/1758626810.ttl
+2025-09-25T10:53:43.547Z {ldes-client} [OrderedStrategy] debug: [memberNotifier - done] Member extraction done for https://marine-term-translations.github.io/P02-NL/LDES/1758626810.ttl
+2025-09-25T10:53:43.547Z {ldes-client} [OrderedStrategy] debug: [checkEnd] No more launched relations
+2025-09-25T10:53:43.554Z {ldes-client} [OrderedStrategy] debug: [checkEnd] Polling is enabled, setting timeout of 60000 ms to poll
+Checking retry allowed for error: Error: HTTP Error Response: 500 Internal Server Error and attempt: 0
+Retry allowed? false
+Failed Query:
+                  INSERT DATA {
+    GRAPH <http://datasets.vocabsearch.local/dcf8c904-99fd-11f0-9b9a-ce8c57b42f6b> {
+        """http://vocab.nerc.ac.uk/collection/P02/FVLT"""^^<http://www.w3.org/2001/XMLSchema#string> <http://www.w3.org/2004/02/skos/core#altLabel> """to be filled in"""@nl.
+        """http://vocab.nerc.ac.uk/collection/P02/FVLT"""^^<http://www.w3.org/2001/XMLSchema#string> <http://www.w3.org/2004/02/skos/core#definition> """to be filled in"""@nl.
+        """http://vocab.nerc.ac.uk/collection/P02/FVLT"""^^<http://www.w3.org/2001/XMLSchema#string> <http://www.w3.org/2004/02/skos/core#prefLabel> """to be filled in"""@nl.
+        """http://vocab.nerc.ac.uk/collection/P02/FVLT"""^^<http://www.w3.org/2001/XMLSchema#string> <http://purl.org/dc/terms/modified> """2025-09-25T10:50:56Z"""^^<http://www.w3.org/2001/XMLSchema#dateTime>.
+        """http://vocab.nerc.ac.uk/collection/P02/FVLT"""^^<http://www.w3.org/2001/XMLSchema#string> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept>.
+    }
+}
+2025-09-25T10:53:51.091Z {ldes-consumer-service} [member-processor] error: HTTP Error Response: 500 Internal Server Error
+2025-09-25T10:53:51.092Z {ldes-client} [Client] info: Stream canceled
+2025-09-25T10:53:51.092Z {ldes-client} [Manager] debug: Closing stream
+2025-09-25T10:53:51.095Z {ldes-consumer-service} [main] error: Processing stream failed
+2025-09-25T10:53:51.091Z {ldes-consumer-service} [main] error: HTTP Error Response: 500 Internal Server Error
