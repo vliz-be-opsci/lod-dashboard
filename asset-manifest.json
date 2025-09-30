@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/lod-dashboard/static/css/main.4d1a230b.css",
-    "main.js": "/lod-dashboard/static/js/main.feb7fa2e.js",
-    "static/js/453.28d7f78c.chunk.js": "/lod-dashboard/static/js/453.28d7f78c.chunk.js",
-    "static/media/ldes_consumer_logs_LDES_2.txt": "/lod-dashboard/static/media/ldes_consumer_logs_LDES_2.30769c02f0bc895dc59f.txt",
-    "static/media/ldes_consumer_logs_LDES_1.txt": "/lod-dashboard/static/media/ldes_consumer_logs_LDES_1.e2ef326a7254b1ba5fb6.txt",
+    "main.js": "/lod-dashboard/static/js/main.8faf5daa.js",
+    "static/js/453.4b6c3599.chunk.js": "/lod-dashboard/static/js/453.4b6c3599.chunk.js",
+    "static/media/ldes_consumer_logs_LDES_2.txt": "/lod-dashboard/static/media/ldes_consumer_logs_LDES_2.c441e1e3506230908ebd.txt",
+    "static/media/ldes_consumer_logs_LDES_1.txt": "/lod-dashboard/static/media/ldes_consumer_logs_LDES_1.f0aa30b15b7833452795.txt",
     "index.html": "/lod-dashboard/index.html",
     "main.4d1a230b.css.map": "/lod-dashboard/static/css/main.4d1a230b.css.map",
-    "main.feb7fa2e.js.map": "/lod-dashboard/static/js/main.feb7fa2e.js.map",
-    "453.28d7f78c.chunk.js.map": "/lod-dashboard/static/js/453.28d7f78c.chunk.js.map"
+    "main.8faf5daa.js.map": "/lod-dashboard/static/js/main.8faf5daa.js.map",
+    "453.4b6c3599.chunk.js.map": "/lod-dashboard/static/js/453.4b6c3599.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4d1a230b.css",
-    "static/js/main.feb7fa2e.js"
+    "static/js/main.8faf5daa.js"
   ]
 }
