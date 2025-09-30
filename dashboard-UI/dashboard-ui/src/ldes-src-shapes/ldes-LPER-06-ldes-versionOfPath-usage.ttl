@@ -5,7 +5,7 @@ ldes:EventClassStreamShape sh:property ldes:EventStreamVersionOfPathSuggestedSha
 
 ldes:EventStreamVersionOfPathSuggestedShape a sh:PropertyShape;
   sh:path ldes:versionOfPath;
-  sh:minCount 2;
+  sh:minCount 1;
   sh:name "LDES versionOfPath";
   sh:description "The path to the IRI in each member that defines the entity of which this member is a version";
   sh:severity sh:Info;

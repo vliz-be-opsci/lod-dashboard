@@ -1,0 +1,37 @@
+{
+    "uri": "https://data.emobon.embrc.eu/metadata.ttl",
+    "type": "LDES",
+    "datetime_completed": "2024-10-04T14:22:10.123456Z",
+    "test_suite": [
+        {
+            "name" : "alt_profile_check",
+            "result": "fail",
+            "message": "200 message, alt-profile found at https://marine-term-translations.github.io/P02-NL/LDES/alt-profile"
+        },
+        {
+            "name" : "check_available_mime_types",
+            "result": "fail",
+            "message": "200 message, text/turtle mime type found in alt-profile"
+        },
+        {
+            "name" : "check_ldes_single_page_check",
+            "result": "fail",
+            "message": "200 message on https://marine-term-translations.github.io/P02-NL/LDES/latest.ttl with response mime type text/turtle"
+        },
+        {
+            "name" : "check_ttl_syntax",
+            "result": "fail",
+            "message": "Turtle syntax is valid"
+        },
+        {
+            "name" : "check_ldes_version",
+            "result": "fail",
+            "message": "LDES version 1.0 detected"
+        },
+        {
+            "name" : "check_shacl_validation",
+            "result": "fail",
+            "message": "Resource is valid against LDES 1.0 SHACL shapes"
+        }
+    ]
+}

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import LogModal from "./LogModal";
 import "./App.css";
 import { loadShapes, fetchTurtle, validateTurtle } from "./shaclUtils";
+import ValidationResultCard from "./ValidationResultCard";
 
 
 function App() {
@@ -203,19 +204,11 @@ function App() {
                           <strong>Conforms:</strong> {shaclReport.conforms ? "Yes" : "No"}
                           <ul>
                             {shaclReport.results && shaclReport.results.length > 0 ? (
-                              shaclReport.results.map((result, i) => {
-                                let msg = result.message;
-                                if (Array.isArray(msg)) {
-                                  msg = msg.map(m => typeof m === 'object' ? JSON.stringify(m) : m).join(', ');
-                                } else if (typeof msg === 'object') {
-                                  msg = JSON.stringify(msg);
-                                }
-                                return (
-                                  <li key={i} style={{ color: result.severity === "Violation" ? "red" : "orange" }}>
-                                    {msg}
-                                  </li>
-                                );
-                              })
+                              shaclReport.results.map((result, i) => (
+                                <li key={i} style={{ color: result.severity === "Violation" ? "red" : "orange", listStyle: "none", marginBottom: "8px" }}>
+                                  <ValidationResultCard result={result.message} />
+                                </li>
+                              ))
                             ) : (
                               <li>No SHACL violations found.</li>
                             )}
