@@ -22,6 +22,7 @@ function App() {
     process.env.PUBLIC_URL + "/ldes-src-shapes/ldes-LPER-06-ldes-versionOfPath-usage.ttl",
     process.env.PUBLIC_URL + "/ldes-src-shapes/ldes-LPER-07-ldes-timestampPath-usage.ttl",
     process.env.PUBLIC_URL + "/ldes-src-shapes/ldes-common.ttl",
+    process.env.PUBLIC_URL + "/ldes-src-shapes/ldes-VLIZ.ttl",
   ];
 
   useEffect(() => {
