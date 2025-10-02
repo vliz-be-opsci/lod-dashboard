@@ -1,0 +1,19 @@
+
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+ldes:EventStreamSubjectShape
+a sh:NodeShape ;
+sh:targetSubjectsOf tree:member ;
+sh:class ldes:EventStream ;
+sh:message "The subject of every tree:member must be an ldes:EventStream" .
+:ConceptMemberShape
+a sh:NodeShape ;
+sh:targetClass skos:Concept ;
+sh:property [
+sh:path [ sh:inversePath tree:member ] ;
+sh:minCount 1 ;
+sh:class ldes:EventStream ;
+sh:message "Every skos:Concept must be the object of at least one tree:member from an ldes:EventStream"
+] .
